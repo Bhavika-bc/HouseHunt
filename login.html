@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login User</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-tabs">
+            <button id="loginTab" class="active" onclick="toggleForm('login')">Login</button>
+            <button id="registerTab" onclick="toggleForm('register')">Register</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn-primary">Sign In</button>
+        </form>
+
+        <form id="registerForm" class="auth-form hidden">
+            <h2>Create Account</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            
+            <div class="role-selection">
+                <label><input type="radio" name="role" checked> Renter</label>
+                <label><input type="radio" name="role"> Owner</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+        
+        <p style="text-align:center; margin-top:15px;">
+            <a href="page.html" style="font-size:0.8rem; color:#666;">Back to Home</a>
+        </p>
+    </div>
+
+    <!--JS linking..let's go-->
+    <script src="script.js"></script>
+
+</body>
+</html>

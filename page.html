@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="nav-left">
+        <ul class="nav-menu">
+            <li><a href="page.html">Home</a></li>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li class="admin-only"><a href="sell.html">Sell (Admin)</a></li>
+        </ul>
+    </div>
+    
+    <div class="nav-logo">
+        <img src="images/images.png" alt="house rent Logo">
+    </div>
+
+    <div class="nav-right">
+        <a href="#" class="nav-link">Manage Rentals</a>
+        <a href="login.html" class="btn-signin-nav">Sign In</a> 
+    </div>
+</nav>
+
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="search-container">
+                <h1>From Search to Stay.<br>Easy Rentals.</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter an address">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+    <div class="info-wrapper">
+        <div class="text-side">
+            <h2>Get home recommendations</h2>
+            <p>Sign in for a more personalized experience.</p>
+        </div>
+        <div class="cards-side">
+            <div class="recommendation-grid">
+
+                <!--1st house rec-->
+                <div class="recom-card">
+                    <img src="images/image-4.avif" alt="House">
+                    <div class="card-info">
+                        <h3>Forest Green</h3>
+                        <p>Vacation Villa in Eggland, Kerala</p>
+                        <p class="price">$500/month</p>
+                    </div>
+                </div>
+
+                <!--2nd houe rec-->
+                <div class="recom-card">
+                    <img src="images/image-2.jpg" alt="House">
+                    <div class="card-info">
+                        <h3>Rose Garden</h3>
+                        <p>Countrtyside Villa for rent in Rose Hills, Hyderabad</p>
+                        <p class="price">$100/month</p>
+                    </div>
+                </div>
+
+                <!--3rd house rec-->
+                <div class="recom-card">
+                    <img src="images/image-3.png" alt="House">
+                    <div class="card-info">
+                        <h3>Lemon Grass</h3>
+                        <p>Modern Villa for rent in Yellow Field, Bangalore</p>
+                        <p class="price">$330/month</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--buy, rent nd sell..-->
+      <section class="action-section">
+
+        <div class="action-card">
+            <img src="images/buy home.webp" alt="Buy a home">
+            <h3>Buy a home</h3>
+            <p>Find your Dream home and live a happy life.</p>
+            <button class="btn-action-outline" onclick="showListings('buy')">Find your dream house</button>
+        </div>
+
+        <div class="action-card">
+            <img src="images/rent house.png" alt="Rent a home">
+            <h3>Rent a home</h3>
+            <p>A house renting system.</p>
+            <button class="btn-action-outline" onclick="showListings('rent')">Find rentals</button>
+        </div>
+
+      </section>
+
+    <!--sections (buy,rent stuff)-->
+        <div id="main-app-container">
+    <section id="selection-view">
+        </section>
+
+    <section id="listings-view" style="display: none;">
+        <div class="view-header" style="padding: 20px;">
+            <button onclick="goBack()" class="btn-back">← Back to Home</button>
+            <h2 id="view-title">Properties</h2>
+        </div>
+
+        <div class="marketplace-container">
+            <aside class="search-panel">
+                <div class="search-box">
+                    <input type="text" placeholder="enter address">
+                    <button>🔍</button>
+                </div>
+            </aside>
+
+            <main class="property-list" id="property-grid">
+                </main>
+        </div>
+    </section>
+</div>
+
+    <!--FOOTER-->
+        <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Real Estate</h3>
+                <ul>
+                    <li><a href="#">Browse Homes</a></li>
+                    <li><a href="#">Rental Buildings</a></li>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Pricings</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Buyers Guide</a></li>
+                    <li><a href="#">Renters Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Help center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h3>Stay Updated</h3>
+                <p>Get the latest home listings in your inbox.</p>
+                <div class="footer-search">
+                    <input type="email" placeholder="Email Address">
+                    <button>Go</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="images/images.png" alt="house rent Logo">
+            </div>
+            <p>&copy; 2026 House Rent System. Created for MERN STACK Project.</p>
+            <div class="social-links">
+                <a href="#">FB</a>
+                <a href="#">TW</a>
+                <a href="#">IG</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--JS linking..let's go-->
+    <script src="script.js"></script>
+
+</body>
+</html>

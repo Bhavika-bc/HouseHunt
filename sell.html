@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body"> <div class="auth-container" style="max-width: 500px;">
+        <h2>Post New Property</h2>
+        <form class="auth-form">
+            <input type="text" placeholder="Property Title (e.g. Blue Villa)" required>
+            
+            <select style="padding: 10px; border-radius: 4px; border: 1px solid #ddd;">
+                <option value="rent">For Rent</option>
+                <option value="buy">For Sale</option>
+            </select>
+
+            <input type="text" placeholder="Location (Mumbai, Bangalore...)" required>
+            <input type="number" placeholder="Price (per month or total)" required>
+            <textarea placeholder="Description" style="padding:10px; border-radius:4px; height:80px;"></textarea>
+            
+            <div class="file-upload">
+                <label>Upload House Image:</label>
+                <input type="file" accept="image/*">
+            </div>
+
+            <button type="submit" class="btn-primary">Post Property</button>
+            <a href="page.html" class="form-link">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>
