@@ -82,7 +82,7 @@ grid.innerHTML = filtered.map(house => `
         title: 'Serenity', 
         price: '₹45,000/mo', 
         loc: 'Laland, Indore', 
-        img: 'images/image-2.jpg', 
+        img: 'images/image-2.jpg',
         owner: 'Bhavika', 
         email: 'bhavika@househunt.com' 
     },
@@ -93,7 +93,7 @@ grid.innerHTML = filtered.map(house => `
         title: 'Shreik Park 2',
         price: '₹25,000/mo', 
         loc: 'River, Indore',
-        img: 'images/image-3.png',
+        img: 'images/image-3.jpg',
         owner: 'bhavika',
         email: 'bhavika@househunt.com'
     },
@@ -116,7 +116,7 @@ grid.innerHTML = filtered.map(house => `
         title: 'Mahima Smart City NX', 
         price: '₹1.8 Cr', 
         loc: 'Super Corridor, Indore', 
-        img: 'images/image-2.jpg', 
+        img: 'images/house.jpg', 
         owner: 'Bhavika', 
         email: 'bbhavika@househunt.com' 
     },
@@ -127,7 +127,7 @@ grid.innerHTML = filtered.map(house => `
         title: 'Skilly Town', 
         price: '₹95 Lac', 
         loc: 'Long Road, Indore', 
-        img: 'images/image-3.png', 
+        img: 'images/image-2.jpg',
         owner: 'Bhavika', 
         email: 'bhavika@househunt.com' 
     },
@@ -138,14 +138,17 @@ grid.innerHTML = filtered.map(house => `
         title: 'Exotica', 
         price: '₹2.2 Cr', 
         loc: 'Cat nip, Indore', 
-        img: 'images/image-4.avif', 
+        img: 'images/image-3.jpg', 
         owner: 'Bhavika', 
         email: 'bhavika@househunt.com'
     }
 ];
 
 function showListings(filter) {
+    document.querySelector('.hero').style.display = 'none';
+    document.querySelector('.main-content').style.display = 'none';
     document.getElementById('selection-view').style.display = 'none';
+
     const listingsSection = document.getElementById('listings-view');
     listingsSection.style.display = 'block';
     
@@ -168,8 +171,8 @@ function showListings(filter) {
                     <span class="type-text">for ${house.type}</span>
                 </div>
                 <div class="owner-section">
-                    <p><strong>owner name:</strong> ${house.owner}</p>
-                    <p><strong>email:</strong> ${house.email}</p>
+                    <p><strong>Owner:</strong> ${house.owner}</p>
+                    <p><strong>Email:</strong> ${house.email}</p>
                 </div>
             </div>
         </div>
